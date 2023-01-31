@@ -1,0 +1,80 @@
+:root {
+  --dark: #111;
+  --light: #eee;
+  --text-color: var(--dark);
+  --page-color: var(--light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--light);
+    --page-color: var(--dark);
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  background-color: #ffff00;
+  outline: 0.25rem solid var(--text-color);
+  outline-offset: 0.3rem;
+  color: var(--dark);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.2rem;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-rendering: optimizeSpeed;
+  background-color: var(--page-color);
+  color: var(--text-color);
+  font-size: calc(1rem + 1vw);
+}
+
+a {
+  display: block;
+  border: 0.2rem solid;
+  padding: 1rem;
+  text-align: center;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: transparent;
+}
+
+main {
+  max-width: 60ch;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.flow > * + * {
+  margin-top: var(--space, 1.25rem);
+}
+
+ul.flow > * + * {
+  --space: 1rem;
+}
+
+@media (-ms-high-contrast: none),
+  (-ms-high-contrast: active),
+  (-moz-touch-enabled: 0),
+  (hover: hover) {
+  a:hover {
+    background-color: var(--text-color);
+    color: var(--page-color);
+  }
+}

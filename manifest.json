@@ -1,0 +1,16 @@
+{
+  "name": "Links",
+  "icons": [
+    {
+      "src": "/favicons/icon-large.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    },
+    {
+      "src": "/favicons/icon-large-maskable.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "maskable"
+    }
+  ]
+}
