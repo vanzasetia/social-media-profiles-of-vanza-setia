@@ -12,6 +12,12 @@
   }
 }
 
+@media (prefers-contrast: less) {
+  body {
+    filter: contrast(70%) saturate(70%);
+  }
+}
+
 *,
 *::after,
 *::before {
