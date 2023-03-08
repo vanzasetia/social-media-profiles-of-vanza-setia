@@ -12,9 +12,9 @@
   }
 }
 
-@media (prefers-contrast: less) {
-  body {
-    filter: contrast(70%) saturate(70%);
+@media (prefers-contrast: more) {
+  :root {
+    --dark: #111;
   }
 }
 
